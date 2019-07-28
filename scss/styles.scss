@@ -1,0 +1,343 @@
+//-----------------------
+// Variables
+//-----------------------
+$color-primary-light: #ffab40;
+$color-primary: #ff9100;
+$color-primary-dark: #ff6d00;
+
+$color-text-primary: #212121;
+$color-text-secondary: #fafafae7;
+
+$color-white: #fff;
+$color-black: #000;
+
+//-------------------------------
+// Font
+// ------------------------------
+@font-face {
+  font-family: "Product";
+  src: url("/font/ProductSans-Regular.ttf") format("truetype"),
+    url("/font/ProductSans-Bold.ttf") format("truetype");
+}
+
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.3%;
+}
+
+body {
+  font-family: "Product";
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  color: $color-text-primary;
+  padding: 2.5rem;
+}
+
+a {
+  color: $color-text-primary;
+  text-decoration: none;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 10rem auto 0 auto;
+  padding: 6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+  }
+}
+
+//------------------------------
+// Navbar
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  z-index: 5;
+  transition: all 0.2s;
+
+  input {
+    display: none;
+  }
+
+  &__trigger {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: $color-text-primary;
+    cursor: pointer;
+  }
+
+  &__list {
+    background: $color-white;
+    box-shadow: 0 0.3rem 0.6rem rgba($color-black, 0.1);
+    padding: 1.5rem 3rem;
+    list-style-type: none;
+    font-size: 1.5rem;
+    display: none;
+
+    li {
+      margin: 1rem 0;
+      padding: 1rem 0;
+      letter-spacing: 0.2rem;
+
+      a:hover {
+        color: $color-primary;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+input:checked ~ .navbar__list {
+  display: block;
+  animation-name: moveAndFade;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+}
+
+// Header
+.header {
+  background: linear-gradient(
+      45deg,
+      rgba($color-primary-dark, 0),
+      rgba($color-primary-light, 0.3)
+    ),
+    url(../images/bed2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  height: 95vh;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  z-index: 3;
+
+  &__logo-box {
+    display: inline-block;
+    color: $color-white;
+    font-family: "Pacifico";
+    font-size: 2.5rem;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border: 1px solid $color-white;
+    padding: 1rem;
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+.heading-primary {
+  padding: 2rem;
+  background: transparentize($color: $color-white, $amount: 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &--main {
+    font-size: 7rem;
+    letter-spacing: 0.5rem;
+    text-transform: capitalize;
+  }
+
+  &--sub {
+    font-size: 2.3rem;
+    position: relative;
+    top: -30px;
+  }
+}
+
+// Rooms
+.section-rooms {
+  background: $color-white;
+  position: relative;
+  z-index: 2;
+  padding-top: 10rem;
+  margin-top: -10rem;
+
+  &__title {
+    font-size: 5rem;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: $color-text-primary;
+      height: 2px;
+      width: 10rem;
+      margin: 2rem 0;
+    }
+  }
+
+  .rooms-info {
+    position: relative;
+
+    span {
+      position: absolute;
+      top: -18rem;
+      left: -7.5rem;
+      color: $color-text-secondary;
+      font-size: 30rem;
+      font-weight: 800;
+      z-index: -1;
+    }
+
+    .rooms-heading {
+      font-size: 4rem;
+    }
+
+    .rooms-description {
+      font-size: 1.5rem;
+      font-weight: 200;
+    }
+  }
+  .composition {
+    position: relative;
+
+    &__photo {
+      width: 55%;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
+      border-radius: 2px;
+      position: absolute;
+      z-index: 1;
+      transition: all 0.2s;
+      &--1 {
+        left: 0;
+        top: -2rem;
+      }
+
+      &--2 {
+        right: 0;
+        top: 2rem;
+      }
+
+      &--3 {
+        left: 20%;
+        top: 10rem;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+        z-index: 2;
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  background: $color-primary;
+  color: $color-white;
+  position: relative;
+
+  &__contact {
+    position: relative;
+
+    &--heading {
+      margin-bottom: 1rem 0;
+      font-size: 1.8rem;
+    }
+
+    &--address {
+      display: inline-block;
+      font-size: 1.4rem;
+      text-align: left;
+      margin-top: 1rem;
+    }
+  }
+
+  .vertical-line {
+    background-color: $color-white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    height: 5rem;
+    width: 0.3rem;
+    border: none;
+  }
+
+  &__links {
+    text-align: center;
+    &--heading {
+      font-size: 1.8rem;
+    }
+
+    &--list {
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        margin: 1.5rem 1rem 1.5rem 0;
+
+        a {
+          display: inline-block;
+
+          i {
+            color: $color-white;
+            font-size: 2rem;
+            padding: 1rem;
+            transition: all 0.5s;
+
+            &:hover {
+              background: $color-white;
+              color: $color-primary;
+              border-radius: 2px;
+              box-shadow: 0 0.2rem 0.5rem rgba($color-primary-dark, 0.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Keyframes
+@keyframes moveAndFade {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
