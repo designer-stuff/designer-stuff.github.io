@@ -1,0 +1,52 @@
+.section-rooms {
+  background: $color-white;
+  position: relative;
+  // margin-top: 6rem;
+  padding: 6rem;
+  z-index: 2;
+
+  .rooms-info {
+    position: relative;
+    text-align: left;
+
+    span {
+      position: absolute;
+      top: -18rem;
+      left: -7.5rem;
+      z-index: -1;
+    }
+  }
+
+  .composition {
+    position: relative;
+
+    &__photo {
+      width: 45%;
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
+      border-radius: 2px;
+      position: absolute;
+      z-index: 1;
+      transition: all 0.2s;
+
+      &--1 {
+        left: 0.8rem;
+        top: 1rem;
+      }
+
+      &--2 {
+        right: 8rem;
+        top: 4rem;
+      }
+
+      &--3 {
+        left: 8rem;
+        top: 11rem;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+        z-index: 2;
+      }
+    }
+  }
+}

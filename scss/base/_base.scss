@@ -1,0 +1,19 @@
+*,
+*:after,
+*:before {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.3%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+a {
+  color: $color-text-primary;
+  text-decoration: none;
+}

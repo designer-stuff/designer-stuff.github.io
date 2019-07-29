@@ -1,0 +1,47 @@
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  z-index: 5;
+  transition: all 0.2s;
+
+  input {
+    display: none;
+  }
+
+  &__trigger {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+    color: $color-text-primary;
+    cursor: pointer;
+  }
+
+  &__list {
+    background: $color-white;
+    box-shadow: 0 0.3rem 0.6rem rgba($color-black, 0.1);
+    padding: 1.5rem 3rem;
+    list-style-type: none;
+    font-size: 1.5rem;
+    display: none;
+
+    li {
+      margin: 1rem 0;
+      padding: 1rem 0;
+      letter-spacing: 0.2rem;
+
+      a:hover {
+        color: $color-primary;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+input:checked ~ .navbar__list {
+  display: block;
+  animation-name: moveAndFade;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+}
