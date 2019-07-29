@@ -26,10 +26,18 @@
         ><i class="fas fa-bars"></i
       ></label>
       <ul class="navbar__list">
-        <li><a href="#single-room">Single Room</a></li>
-        <li><a href="#deluxe-room">Deluxe Room</a></li>
-        <li><a href="#double-deluxe-room">Double Deluxe Room</a></li>
-        <li><a href="#presidential-room">Presidential Room</a></li>
+        <li class="sub-item">
+          <input type="checkbox" id="rooms" />
+          <label for="rooms">Rooms</label>
+          <ul class="submenu">
+            <li><a href="#single-room">Single Room</a></li>
+            <li><a href="#deluxe-room">Deluxe Room</a></li>
+            <li><a href="#double-deluxe-room">Double Deluxe Room</a></li>
+            <li><a href="#presidential-room">Presidential Room</a></li>
+          </ul>
+        </li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#feedback">Feedback</a></li>
       </ul>
     </nav>
 
@@ -217,7 +225,12 @@
     </section>
 
     <!-- map section -->
-    <div class="section__title" data-aos="fade-up" data-aos-duration="1700">
+    <div
+      class="section__title"
+      id="location"
+      data-aos="fade-up"
+      data-aos-duration="1700"
+    >
       See us on map.
     </div>
 
@@ -234,8 +247,13 @@
       </div>
     </section>
 
-    <!-- form section -->
-    <div class="section__title" data-aos="fade-up" data-aos-duration="1700">
+    <!-- comment form section -->
+    <div
+      class="section__title"
+      id="feedback"
+      data-aos="fade-up"
+      data-aos-duration="1700"
+    >
       Give Feedback
     </div>
     <section class="section-comment">
@@ -344,6 +362,7 @@
             data-aos="fade-up"
             data-aos-duration="1700"
             data-aos-delay="1750"
+            data-aos-offset="10"
           >
             <div class="card">
               <div class="card--title">Rachelle</div>

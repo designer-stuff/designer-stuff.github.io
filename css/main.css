@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @keyframes moveAndFade {
   0% {
     opacity: 0;
@@ -92,8 +93,8 @@ body {
   position: fixed;
   top: 5rem;
   right: 5rem;
-  z-index: 5;
   transition: all 0.2s;
+  z-index: 5;
 }
 .navbar input {
   display: none;
@@ -106,10 +107,11 @@ body {
 }
 .navbar__list {
   background: #fff;
-  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
   padding: 1.5rem 3rem;
   list-style-type: none;
   font-size: 1.5rem;
+  border-radius: 2px;
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
   display: none;
 }
 .navbar__list li {
@@ -127,6 +129,37 @@ input:checked ~ .navbar__list {
   animation-name: moveAndFade;
   animation-duration: 0.2s;
   animation-timing-function: ease-out;
+}
+
+.navbar__list li {
+  position: relative;
+}
+.navbar__list li .submenu {
+  list-style-type: none;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  display: none;
+}
+.navbar__list li label {
+  display: block;
+}
+.navbar__list li label:after {
+  content: "";
+  color: #212121;
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  text-decoration: inherit;
+  position: absolute;
+  right: 0;
+}
+.navbar__list li label:hover {
+  color: #ff9100;
+  cursor: pointer;
+}
+
+input:checked ~ .submenu {
+  display: block;
 }
 
 .section__title {
