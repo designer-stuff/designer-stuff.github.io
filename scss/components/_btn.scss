@@ -7,6 +7,12 @@
   text-transform: capitalize;
   cursor: pointer;
   box-shadow: 0 0.2rem 0.2rem rgba($color-black, 0.2);
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.2);
+    transform: translateY(-2px);
+  }
 }
 
 .btn-primary {

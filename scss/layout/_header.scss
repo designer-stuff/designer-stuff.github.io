@@ -4,13 +4,16 @@
       rgba($color-primary-dark, 0),
       rgba($color-primary-light, 0.3)
     ),
-    url(../images/bed2.jpg);
+    url(../images/single.jpg);
   background-position: center;
   background-size: cover;
   position: relative;
   height: 95vh;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  z-index: 3;
+
+  @include respond(phone) {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
 
   &__logo-box {
     display: inline-block;
@@ -26,7 +29,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
   }

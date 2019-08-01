@@ -4,7 +4,7 @@ AOS.init();
 // Smooth Scrolling initialization
 let scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
-  offset: 80
+  offset: 100
 });
 
 // Maps

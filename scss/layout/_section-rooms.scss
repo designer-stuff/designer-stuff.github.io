@@ -1,9 +1,6 @@
 .section-rooms {
   background: $color-white;
   position: relative;
-  // margin-top: 6rem;
-  padding: 6rem;
-  z-index: 2;
 
   .rooms-info {
     position: relative;
@@ -24,7 +21,7 @@
       width: 45%;
       box-shadow: 0 0.5rem 1rem rgba($color-black, 0.4);
       border-radius: 2px;
-      position: absolute;
+      position: relative;
       z-index: 1;
       transition: all 0.2s;
 
@@ -39,8 +36,8 @@
       }
 
       &--3 {
-        left: 8rem;
-        top: 11rem;
+        left: -5rem;
+        top: -2rem;
       }
 
       &:hover {

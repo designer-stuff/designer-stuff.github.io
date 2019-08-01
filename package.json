@@ -1,0 +1,11 @@
+{
+  "name": "serenity",
+  "version": "1.0.0",
+  "description": "A webpage for displaying rooms.",
+  "main": "script.js",
+  "scripts": {
+    "compile:scss": "node-sass -w scss/main.scss css/main.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

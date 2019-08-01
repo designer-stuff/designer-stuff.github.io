@@ -1,6 +1,5 @@
 .footer {
   background: $color-primary;
-  color: $color-white;
   position: relative;
 
   &__contact {
@@ -8,13 +7,10 @@
 
     &--heading {
       margin-bottom: 0.5rem;
-      font-size: 1.8rem;
     }
 
     &--address {
       display: inline-block;
-      font-size: 1.4rem;
-      text-align: center;
       margin-top: 1rem;
     }
   }
@@ -35,14 +31,11 @@
           display: inline-block;
 
           i {
-            color: $color-white;
-            font-size: 2rem;
             padding: 1rem;
             transition: all 0.5s;
 
             &:hover {
               background: $color-white;
-              color: $color-primary;
               border-radius: 2px;
               box-shadow: 0 0.2rem 0.5rem rgba($color-primary-dark, 0.5);
             }
@@ -53,18 +46,13 @@
   }
 
   &__comments {
-    width: 100%;
+    width: 96%;
     height: 13rem;
     background: $color-white;
     padding: 1rem 0.5rem;
     overflow: scroll;
     overflow-x: hidden;
     border-radius: 2px;
-
-    &--heading {
-      margin-bottom: 2.5rem;
-      font-size: 1.8rem;
-    }
 
     &::-webkit-scrollbar {
       width: 0.5rem;
@@ -79,24 +67,11 @@
     .card {
       width: 90%;
       margin: 0 auto;
-      color: $color-text-primary;
       box-shadow: 0 0.2rem 0.2rem rgba($color-black, 0.1);
       text-align: left;
       padding: 1rem;
       margin-bottom: 1rem;
       border-radius: 2px;
-
-      &--title {
-        font-size: 1.2rem;
-        font-weight: 700;
-      }
-
-      &--body {
-        p {
-          font-size: 1rem;
-          font-weight: 400;
-        }
-      }
     }
   }
 }

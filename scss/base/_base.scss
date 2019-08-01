@@ -7,10 +7,30 @@
 
 html {
   font-size: 62.3%;
+
+  @include respond(tab-land) {
+    // width < 1200
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    // width < 900
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    // widht > 1800
+    font-size: 75%;
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 2.5rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }
 
 a {
