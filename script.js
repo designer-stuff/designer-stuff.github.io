@@ -39,3 +39,20 @@ submit.addEventListener("click", e => {
   name.value = "";
   comment.value = "";
 });
+
+// card animation
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let cards = document.getElementsByClassName("card");
+  for (let i = 0; i < cards.length; i++) {
+    cards[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > cards.length) {
+    slideIndex = 1;
+  }
+  cards[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
